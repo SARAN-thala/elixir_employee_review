@@ -1,5 +1,13 @@
 defmodule ElixirEmployeeReview.Router do
   use ElixirEmployeeReview.Web, :router
+  use ExAdmin.Router
+
+  # your app's routes
+  scope "/admin", ExAdmin do
+    pipe_through :browser
+    admin_routes
+  end
+
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -17,6 +25,8 @@ defmodule ElixirEmployeeReview.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/employees", EmployeeController
+    resources "/reviews", ReviewController
   end
 
   # Other scopes may use custom stacks.
