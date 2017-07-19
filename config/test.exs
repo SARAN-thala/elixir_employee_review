@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :elixir_employee_review, ElixirEmployeeReview.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "saran431",
+  password: "postgres",
   database: "elixir_employee_review_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
