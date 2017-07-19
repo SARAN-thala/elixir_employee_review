@@ -21,7 +21,6 @@ defmodule ElixirEmployeeReview.Review do
     |> cast(params, @required_fields)
     |> validate_required(@required_fields)
     |> validate_length(:review, min: 1, max: 500)
-    |> validate_length(:rating, min: 1, max: 1)
-    |> validate_format(:rating, ~r/[A-C]/)
+    |> validate_format(:rating, ~r/^[A-C]$/)
   end
 end
