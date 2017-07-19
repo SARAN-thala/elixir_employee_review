@@ -34,9 +34,9 @@ defmodule ElixirEmployeeReview.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.2.4"},
      {:phoenix_pubsub, "~> 1.0"},
-     {:phoenix_ecto, "~> 3.0.0"},
+     {:phoenix_ecto, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
-     {:ex_admin, "~> 0.8"},
+     {:ex_admin, github: "smpallen99/ex_admin"},
      {:phoenix_html, "~> 2.6"},
      {:credo, "~> 0.8", only: [:dev, :con], runtime: false},
      {:excoveralls, "~> 0.7", only: :test},

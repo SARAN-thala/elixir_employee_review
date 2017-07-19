@@ -6,7 +6,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Role</th>
-      <th>Manager Id</th>
+      <th>Employee Id</th>
 
       <th></th>
     </tr>
@@ -17,7 +17,7 @@
       <td><%= employee.name %></td>
       <td><%= employee.email %></td>
       <td><%= employee.role %></td>
-      <td><%= employee.manager_id %></td>
+      <td><%= employee.employee_id %></td>
 
       <td class="text-right">
         <%= link "Show", to: employee_path(@conn, :show, employee), class: "btn btn-default btn-xs" %>
