@@ -6,6 +6,7 @@ defmodule ElixirEmployeeReview.Employee do
     field :email, :string
     field :role, :string
     field :employee_id, :integer
+#    [saran] change employee
 
     timestamps()
   end

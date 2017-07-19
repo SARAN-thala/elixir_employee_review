@@ -10,7 +10,9 @@ defmodule ElixirEmployeeReview.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      aliases: aliases(),
-     deps: deps()]
+     deps: deps(),
+     test_coverage: [tool: ExCoveralls],
+     preferred_cli_env: ["coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test]]
   end
 
   # Configuration for the OTP application.
@@ -36,6 +38,9 @@ defmodule ElixirEmployeeReview.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:ex_admin, "~> 0.8"},
      {:phoenix_html, "~> 2.6"},
+     {:credo, "~> 0.8", only: [:dev, :con], runtime: false},
+     {:excoveralls, "~> 0.7", only: :test},
+#     {:dogma, "~> 0.1", only: :dev},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"}]

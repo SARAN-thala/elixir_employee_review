@@ -37,7 +37,7 @@ config :phoenix, :stacktrace_depth, 20
 config :elixir_employee_review, ElixirEmployeeReview.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "saran431",
   database: "elixir_employee_review_dev",
   hostname: "localhost",
   pool_size: 10

@@ -11,7 +11,7 @@ defmodule ElixirEmployeeReview.ReviewTest do
     assert changeset.valid?
   end
 
-  test "ating should contain only A | B | C " do
+  test "rating should contain only A | B | C " do
     attrs = %{@valid_attrs | rating: "AA"}
     assert {:rating, "has invalid format"} in errors_on(%Review{}, attrs)
   end
