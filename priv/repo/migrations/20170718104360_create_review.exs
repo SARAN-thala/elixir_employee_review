@@ -3,10 +3,10 @@ defmodule ElixirEmployeeReview.Repo.Migrations.CreateReview do
 
   def change do
     create table(:reviews) do
-      add :review, :string
-      add :rating, :string
-      add :employee_id, references(:employees, on_delete: :nothing)
-      add :reviewer_id, references(:employees, on_delete: :nothing)
+      add :review, :string, null: false, size: 500
+      add :rating, :string, null: false, size: 1
+      add :employee_id, references(:employees, column: "employee_id", on_delete: :delete_all, on_update: :update_all)
+      add :reviewer_id, references(:employees, column: "employee_id", on_delete: :delete_all, on_update: :update_all)
 
       timestamps()
     end

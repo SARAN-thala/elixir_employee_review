@@ -18,7 +18,12 @@
   </li>
 
   <li>
-    <strong>Manager:</strong>
+    <strong>Employee Id:</strong>
+    <%= @employee.manager_id %>
+  </li>
+
+  <li>
+    <strong>Manager Id:</strong>
     <%= @employee.manager_id %>
   </li>
 

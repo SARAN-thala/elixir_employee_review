@@ -6,7 +6,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Role</th>
-      <th>Manager</th>
+      <th>Manager Id</th>
 
       <th></th>
     </tr>
